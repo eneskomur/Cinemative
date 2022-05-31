@@ -1,0 +1,369 @@
+{
+	"info": {
+		"_postman_id": "85c7f104-5683-431f-ab6f-f79292a1b954",
+		"name": "cinemative",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "XbnJDr1ZBvtDZ5eIR9fD7c6oNUOfa8sxVP6JxlYt",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "eneskomur@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/oauth/token",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Info",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2VhNDY1OWY3ZjhmZTJmY2Q5NmExMzI2OTUyMzhmZDFjYmI5MDJiZGRlZjMyMWYzZWI4ZTMwZjRhNGEyNTkzZmU0ZGJmZjNmMWU3OTBmYjkiLCJpYXQiOjE2NDYwNTY3NzYuMjQwMTYxLCJuYmYiOjE2NDYwNTY3NzYuMjQwMTY1LCJleHAiOjE2Nzc1OTI3NzYuMjI3MDc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.r-Mp714wGgcBOdRmGqSYkHuIHyCmzCQxJEMHjk36bwScnArFTyKjMqiV0TgWH5PUdoSUwQerdR7IXZlXdOgypieMfjutXRVmweLdB-A_I31h0MyitHCneWOcBMd2kF3hxQFh-49zBomWOMIN7QswTATpGggOthXLRiv7h_vgl3j1sC4hmFEGsdTyL6IQX8_TOt8IY1lfeQBYNgqadIXj-To4g3OuboQ8zYsxowBxE7vVk1BA_3kMVkQ2B7rKj-PPygyr_xQ9EEX_cfnCJACbbjZYeZv0HD9UFSt-FRPMf6Z5YB1Yqnm8ZEVUXRh-jbP6XOXQMHqdzXBqtGbvi4fRSg7t9DocyOmnsP8wEENivtvmZOW7qa6SUCTuGbplt5j8OKmD1vxQlaJ6vY1d9nrUp_Gx95OyKOnkV-gFlWILLp9vW1B1W-7STmuGorqgxhJ-hOgxnrA5qFh8_tJIzFE_fJwHTYWCd_EJ5o-4x3fU4c-HQ90q2BBHO35ixZRJMzpysCQp3gbk3QEImtEbjm21dESaWmgNBKSB45e6RQMvaLj-29JnTg9fdP69WQJVtWFjKREV1gH8z8_NQRSMt2DKlKeTWFYKvwEpz8qcFoFJ4UxndE2e4IWd38d1seUlJXBBGDG91CAnxdRg-y74kH0in2b6665DzRyKoJpy3JElud4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/user",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cities",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2VhNDY1OWY3ZjhmZTJmY2Q5NmExMzI2OTUyMzhmZDFjYmI5MDJiZGRlZjMyMWYzZWI4ZTMwZjRhNGEyNTkzZmU0ZGJmZjNmMWU3OTBmYjkiLCJpYXQiOjE2NDYwNTY3NzYuMjQwMTYxLCJuYmYiOjE2NDYwNTY3NzYuMjQwMTY1LCJleHAiOjE2Nzc1OTI3NzYuMjI3MDc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.r-Mp714wGgcBOdRmGqSYkHuIHyCmzCQxJEMHjk36bwScnArFTyKjMqiV0TgWH5PUdoSUwQerdR7IXZlXdOgypieMfjutXRVmweLdB-A_I31h0MyitHCneWOcBMd2kF3hxQFh-49zBomWOMIN7QswTATpGggOthXLRiv7h_vgl3j1sC4hmFEGsdTyL6IQX8_TOt8IY1lfeQBYNgqadIXj-To4g3OuboQ8zYsxowBxE7vVk1BA_3kMVkQ2B7rKj-PPygyr_xQ9EEX_cfnCJACbbjZYeZv0HD9UFSt-FRPMf6Z5YB1Yqnm8ZEVUXRh-jbP6XOXQMHqdzXBqtGbvi4fRSg7t9DocyOmnsP8wEENivtvmZOW7qa6SUCTuGbplt5j8OKmD1vxQlaJ6vY1d9nrUp_Gx95OyKOnkV-gFlWILLp9vW1B1W-7STmuGorqgxhJ-hOgxnrA5qFh8_tJIzFE_fJwHTYWCd_EJ5o-4x3fU4c-HQ90q2BBHO35ixZRJMzpysCQp3gbk3QEImtEbjm21dESaWmgNBKSB45e6RQMvaLj-29JnTg9fdP69WQJVtWFjKREV1gH8z8_NQRSMt2DKlKeTWFYKvwEpz8qcFoFJ4UxndE2e4IWd38d1seUlJXBBGDG91CAnxdRg-y74kH0in2b6665DzRyKoJpy3JElud4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cities",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cities"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cinemas",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2VhNDY1OWY3ZjhmZTJmY2Q5NmExMzI2OTUyMzhmZDFjYmI5MDJiZGRlZjMyMWYzZWI4ZTMwZjRhNGEyNTkzZmU0ZGJmZjNmMWU3OTBmYjkiLCJpYXQiOjE2NDYwNTY3NzYuMjQwMTYxLCJuYmYiOjE2NDYwNTY3NzYuMjQwMTY1LCJleHAiOjE2Nzc1OTI3NzYuMjI3MDc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.r-Mp714wGgcBOdRmGqSYkHuIHyCmzCQxJEMHjk36bwScnArFTyKjMqiV0TgWH5PUdoSUwQerdR7IXZlXdOgypieMfjutXRVmweLdB-A_I31h0MyitHCneWOcBMd2kF3hxQFh-49zBomWOMIN7QswTATpGggOthXLRiv7h_vgl3j1sC4hmFEGsdTyL6IQX8_TOt8IY1lfeQBYNgqadIXj-To4g3OuboQ8zYsxowBxE7vVk1BA_3kMVkQ2B7rKj-PPygyr_xQ9EEX_cfnCJACbbjZYeZv0HD9UFSt-FRPMf6Z5YB1Yqnm8ZEVUXRh-jbP6XOXQMHqdzXBqtGbvi4fRSg7t9DocyOmnsP8wEENivtvmZOW7qa6SUCTuGbplt5j8OKmD1vxQlaJ6vY1d9nrUp_Gx95OyKOnkV-gFlWILLp9vW1B1W-7STmuGorqgxhJ-hOgxnrA5qFh8_tJIzFE_fJwHTYWCd_EJ5o-4x3fU4c-HQ90q2BBHO35ixZRJMzpysCQp3gbk3QEImtEbjm21dESaWmgNBKSB45e6RQMvaLj-29JnTg9fdP69WQJVtWFjKREV1gH8z8_NQRSMt2DKlKeTWFYKvwEpz8qcFoFJ4UxndE2e4IWd38d1seUlJXBBGDG91CAnxdRg-y74kH0in2b6665DzRyKoJpy3JElud4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cinemas/7",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cinemas",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Cinemas Films",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2VhNDY1OWY3ZjhmZTJmY2Q5NmExMzI2OTUyMzhmZDFjYmI5MDJiZGRlZjMyMWYzZWI4ZTMwZjRhNGEyNTkzZmU0ZGJmZjNmMWU3OTBmYjkiLCJpYXQiOjE2NDYwNTY3NzYuMjQwMTYxLCJuYmYiOjE2NDYwNTY3NzYuMjQwMTY1LCJleHAiOjE2Nzc1OTI3NzYuMjI3MDc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.r-Mp714wGgcBOdRmGqSYkHuIHyCmzCQxJEMHjk36bwScnArFTyKjMqiV0TgWH5PUdoSUwQerdR7IXZlXdOgypieMfjutXRVmweLdB-A_I31h0MyitHCneWOcBMd2kF3hxQFh-49zBomWOMIN7QswTATpGggOthXLRiv7h_vgl3j1sC4hmFEGsdTyL6IQX8_TOt8IY1lfeQBYNgqadIXj-To4g3OuboQ8zYsxowBxE7vVk1BA_3kMVkQ2B7rKj-PPygyr_xQ9EEX_cfnCJACbbjZYeZv0HD9UFSt-FRPMf6Z5YB1Yqnm8ZEVUXRh-jbP6XOXQMHqdzXBqtGbvi4fRSg7t9DocyOmnsP8wEENivtvmZOW7qa6SUCTuGbplt5j8OKmD1vxQlaJ6vY1d9nrUp_Gx95OyKOnkV-gFlWILLp9vW1B1W-7STmuGorqgxhJ-hOgxnrA5qFh8_tJIzFE_fJwHTYWCd_EJ5o-4x3fU4c-HQ90q2BBHO35ixZRJMzpysCQp3gbk3QEImtEbjm21dESaWmgNBKSB45e6RQMvaLj-29JnTg9fdP69WQJVtWFjKREV1gH8z8_NQRSMt2DKlKeTWFYKvwEpz8qcFoFJ4UxndE2e4IWd38d1seUlJXBBGDG91CAnxdRg-y74kH0in2b6665DzRyKoJpy3JElud4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cinema_films/3",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cinema_films",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Tickets",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2VhNDY1OWY3ZjhmZTJmY2Q5NmExMzI2OTUyMzhmZDFjYmI5MDJiZGRlZjMyMWYzZWI4ZTMwZjRhNGEyNTkzZmU0ZGJmZjNmMWU3OTBmYjkiLCJpYXQiOjE2NDYwNTY3NzYuMjQwMTYxLCJuYmYiOjE2NDYwNTY3NzYuMjQwMTY1LCJleHAiOjE2Nzc1OTI3NzYuMjI3MDc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.r-Mp714wGgcBOdRmGqSYkHuIHyCmzCQxJEMHjk36bwScnArFTyKjMqiV0TgWH5PUdoSUwQerdR7IXZlXdOgypieMfjutXRVmweLdB-A_I31h0MyitHCneWOcBMd2kF3hxQFh-49zBomWOMIN7QswTATpGggOthXLRiv7h_vgl3j1sC4hmFEGsdTyL6IQX8_TOt8IY1lfeQBYNgqadIXj-To4g3OuboQ8zYsxowBxE7vVk1BA_3kMVkQ2B7rKj-PPygyr_xQ9EEX_cfnCJACbbjZYeZv0HD9UFSt-FRPMf6Z5YB1Yqnm8ZEVUXRh-jbP6XOXQMHqdzXBqtGbvi4fRSg7t9DocyOmnsP8wEENivtvmZOW7qa6SUCTuGbplt5j8OKmD1vxQlaJ6vY1d9nrUp_Gx95OyKOnkV-gFlWILLp9vW1B1W-7STmuGorqgxhJ-hOgxnrA5qFh8_tJIzFE_fJwHTYWCd_EJ5o-4x3fU4c-HQ90q2BBHO35ixZRJMzpysCQp3gbk3QEImtEbjm21dESaWmgNBKSB45e6RQMvaLj-29JnTg9fdP69WQJVtWFjKREV1gH8z8_NQRSMt2DKlKeTWFYKvwEpz8qcFoFJ4UxndE2e4IWd38d1seUlJXBBGDG91CAnxdRg-y74kH0in2b6665DzRyKoJpy3JElud4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cinema_tickets",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cinema_tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Unsold Tickets",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2VhNDY1OWY3ZjhmZTJmY2Q5NmExMzI2OTUyMzhmZDFjYmI5MDJiZGRlZjMyMWYzZWI4ZTMwZjRhNGEyNTkzZmU0ZGJmZjNmMWU3OTBmYjkiLCJpYXQiOjE2NDYwNTY3NzYuMjQwMTYxLCJuYmYiOjE2NDYwNTY3NzYuMjQwMTY1LCJleHAiOjE2Nzc1OTI3NzYuMjI3MDc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.r-Mp714wGgcBOdRmGqSYkHuIHyCmzCQxJEMHjk36bwScnArFTyKjMqiV0TgWH5PUdoSUwQerdR7IXZlXdOgypieMfjutXRVmweLdB-A_I31h0MyitHCneWOcBMd2kF3hxQFh-49zBomWOMIN7QswTATpGggOthXLRiv7h_vgl3j1sC4hmFEGsdTyL6IQX8_TOt8IY1lfeQBYNgqadIXj-To4g3OuboQ8zYsxowBxE7vVk1BA_3kMVkQ2B7rKj-PPygyr_xQ9EEX_cfnCJACbbjZYeZv0HD9UFSt-FRPMf6Z5YB1Yqnm8ZEVUXRh-jbP6XOXQMHqdzXBqtGbvi4fRSg7t9DocyOmnsP8wEENivtvmZOW7qa6SUCTuGbplt5j8OKmD1vxQlaJ6vY1d9nrUp_Gx95OyKOnkV-gFlWILLp9vW1B1W-7STmuGorqgxhJ-hOgxnrA5qFh8_tJIzFE_fJwHTYWCd_EJ5o-4x3fU4c-HQ90q2BBHO35ixZRJMzpysCQp3gbk3QEImtEbjm21dESaWmgNBKSB45e6RQMvaLj-29JnTg9fdP69WQJVtWFjKREV1gH8z8_NQRSMt2DKlKeTWFYKvwEpz8qcFoFJ4UxndE2e4IWd38d1seUlJXBBGDG91CAnxdRg-y74kH0in2b6665DzRyKoJpy3JElud4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cinema_tickets/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cinema_tickets",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buy Ticket",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiN2VhNDY1OWY3ZjhmZTJmY2Q5NmExMzI2OTUyMzhmZDFjYmI5MDJiZGRlZjMyMWYzZWI4ZTMwZjRhNGEyNTkzZmU0ZGJmZjNmMWU3OTBmYjkiLCJpYXQiOjE2NDYwNTY3NzYuMjQwMTYxLCJuYmYiOjE2NDYwNTY3NzYuMjQwMTY1LCJleHAiOjE2Nzc1OTI3NzYuMjI3MDc5LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.r-Mp714wGgcBOdRmGqSYkHuIHyCmzCQxJEMHjk36bwScnArFTyKjMqiV0TgWH5PUdoSUwQerdR7IXZlXdOgypieMfjutXRVmweLdB-A_I31h0MyitHCneWOcBMd2kF3hxQFh-49zBomWOMIN7QswTATpGggOthXLRiv7h_vgl3j1sC4hmFEGsdTyL6IQX8_TOt8IY1lfeQBYNgqadIXj-To4g3OuboQ8zYsxowBxE7vVk1BA_3kMVkQ2B7rKj-PPygyr_xQ9EEX_cfnCJACbbjZYeZv0HD9UFSt-FRPMf6Z5YB1Yqnm8ZEVUXRh-jbP6XOXQMHqdzXBqtGbvi4fRSg7t9DocyOmnsP8wEENivtvmZOW7qa6SUCTuGbplt5j8OKmD1vxQlaJ6vY1d9nrUp_Gx95OyKOnkV-gFlWILLp9vW1B1W-7STmuGorqgxhJ-hOgxnrA5qFh8_tJIzFE_fJwHTYWCd_EJ5o-4x3fU4c-HQ90q2BBHO35ixZRJMzpysCQp3gbk3QEImtEbjm21dESaWmgNBKSB45e6RQMvaLj-29JnTg9fdP69WQJVtWFjKREV1gH8z8_NQRSMt2DKlKeTWFYKvwEpz8qcFoFJ4UxndE2e4IWd38d1seUlJXBBGDG91CAnxdRg-y74kH0in2b6665DzRyKoJpy3JElud4",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/cinema_tickets?cinema_film_id=2&seat_number=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"cinema_tickets"
+					],
+					"query": [
+						{
+							"key": "cinema_film_id",
+							"value": "2"
+						},
+						{
+							"key": "seat_number",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
